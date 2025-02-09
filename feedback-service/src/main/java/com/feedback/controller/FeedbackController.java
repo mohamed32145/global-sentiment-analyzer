@@ -2,10 +2,33 @@ package com.feedback.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+@RestController
+@RequestMapping("/feedback")
+public class FeedbackController {
+    @GetMapping
+    public String getFeedback()
+    {
+        return " hello world we are trying something new good luck for us";
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* 
 @RestController
 @RequestMapping("/feedback")
 public class FeedbackController {
@@ -21,3 +44,4 @@ public class FeedbackController {
         return ResponseEntity.ok("Feedback sent to Kafka");
     }
 }
+*/
